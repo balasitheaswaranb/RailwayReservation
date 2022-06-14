@@ -36,7 +36,7 @@ public class Main {
 					int password = sc.nextInt();
 					if (admin.isAdmin(username, password)) {
 						System.out.print("  Enter number of total tickets : ");
-						admin.assignSeats(sc.nextInt());
+						Seat.assignSeats(sc.nextInt());
 					} else {
 						System.out.println("  Invalid Username and Password");
 					}
