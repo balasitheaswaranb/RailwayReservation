@@ -74,5 +74,17 @@ public class Seat {
 			pD.setAlloted(Passenger.Alloted.WAITINGLIST);
 		}
 	}
+public static void assignSeats(int totalSeats) {
 
+		Seat.availableLowerBerth = totalSeats * 25 / 100;
+		Seat.availableMiddleBerth = totalSeats * 25 / 100;
+		Seat.availableUpperBerth = totalSeats * 25 / 100;
+		if (totalSeats >= 10) {
+			Seat.availableRAC = totalSeats * 15 / 100;
+			Seat.availableWaitingList = totalSeats * 10 / 100;
+		} else {
+			Seat.availableRAC = 1;
+			Seat.availableWaitingList = 1;
+		}
+	}
 }
